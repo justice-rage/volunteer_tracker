@@ -50,6 +50,9 @@ class Volunteer
     def delete
         DB.exec("DELETE FROM volunteers WHERE id = #{@id}")
     end
-    
+
+    def project
+        Project.find(@project_id)
+    end
 
 end
