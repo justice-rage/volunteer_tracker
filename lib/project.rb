@@ -37,4 +37,9 @@ class Project
         self.title() == project_to_compare.title()
     end
 
+    def update(title)
+        @title = title
+        DB.exec("UPDATE projects SET title = '#{@title}' WHERE id = #{@id};")
+    end
+
 end
